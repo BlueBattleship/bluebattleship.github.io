@@ -18,22 +18,32 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
+                    {% if site.sections.services %}
                     <li>
                         <a class="page-scroll" href="#services">Services</a>
                     </li>
+                    {% endif %}
+                    {% if site.sections.portfolio %}
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
                     </li>
+                    {% endif %}
+                    {% if site.sections.about %}
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
+                    {% endif %}
+                    {% if site.sections.team %}
                     <li>
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
+                    {% endif %}
+                    {% if site.sections.contact %}
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
-                </ul>
+                    {% endif %}
+                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -46,7 +56,9 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To Our Studio!</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
+                {% if site.sections.services %}
                 <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -55,4 +67,3 @@
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
         {% endfor %}
  -->
-
